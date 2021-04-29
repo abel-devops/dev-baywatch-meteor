@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
+//import firebase from 'firebase';
 import Clock from 'react-live-clock';
-
-import './App.css';
 import SingleBay from './singleBay';
 
 class BayAdmin extends Component {
