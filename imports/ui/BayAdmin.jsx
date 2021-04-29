@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import firebase from 'firebase';
 import Clock from 'react-live-clock';
-import SingleBay from './singleBay';
+import SingleBay from './components/SingleBay';
 
 class BayAdmin extends Component {
     constructor(props) {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 //import firebase from './firebase';
 //import 'firebase/database'
-import BayItem from './bayItem';
-import Welcome from './Welcome';
-import ExpendList from './ExpendList';
-import catalogItems from './suggested';
+import BayItem from './components/BayItem';
+import Welcome from './components/Welcome';
+import ExpendList from './components/ExpendList';
+import catalogItems from './components/Suggested';
 import Autocomplete from 'react-autocomplete';
-import NavIcons from './components/navigationIcons.js';
+import NavIcons from './components/NavigationIcons';
 
 class BayClient extends Component {
     constructor(props) {
