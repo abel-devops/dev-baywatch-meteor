@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
-import 'firebase/database'
+//import firebase from './firebase';
+//import 'firebase/database'
 import BayItem from './bayItem';
 import Welcome from './Welcome';
 import ExpendList from './ExpendList';
