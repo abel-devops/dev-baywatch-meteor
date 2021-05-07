@@ -11,7 +11,7 @@ const BayAdmin = () => {
 
     const allBays = bays.map(item => {
         // var itemsObject = item.list;
-        // var listItems = [];
+        var listItems = [];
         // for (var key in itemsObject) {
         //     listItems.push({
         //         key: key,
@@ -23,13 +23,13 @@ const BayAdmin = () => {
         //     })
         //}
         return <SingleBay
-            key={item.bay}
+            key={item._id}
             sort={item.sort}
             jobName={item.jobName}
             techName={item.techName}
-            // listItems={listItems}
-            bay={item._id}
-            // listLength={listItems.length}
+            listItems={listItems}
+            bay={item.name}
+            listLength={listItems.length}
             qr={item.qr}
         />
     });
