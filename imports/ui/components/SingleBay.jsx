@@ -73,8 +73,8 @@ class singleBay extends Component {
             />
         })
 
-        const bayNum = this.props.bay.toUpperCase().slice(3, 5);
-
+        //const bayNum = this.props.bay.toUpperCase().slice(3, 5);
+        const bayNum = this.props.bay
 
         return (
 
