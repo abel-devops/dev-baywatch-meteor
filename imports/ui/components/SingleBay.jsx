@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SingleItem from './singleItem';
+import SingleItem from './SingleItem';
 
 class singleBay extends Component {
     constructor(props) {

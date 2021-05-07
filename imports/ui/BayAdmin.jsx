@@ -2,37 +2,38 @@ import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import { BaysCollection } from '../api/bays';
 import Clock from 'react-live-clock';
-//import SingleBay from './components/SingleBay';
+import SingleBay from './components/SingleBay';
 
 const BayAdmin = () => {
 
     const bays = useTracker(() => BaysCollection.find({}).fetch());
     console.log(bays);
 
-        // const items = this.state.jobs.map(item => {
-        //     var itemsObject = item.list;
-        //     var listItems = [];
-        //     for (var key in itemsObject) {
-        //         listItems.push({
-        //             key: key,
-        //             item: itemsObject[key].item,
-        //             grabbed: itemsObject[key].grabbed,
-        //             received: itemsObject[key].received,
-        //             starred: itemsObject[key].starred,
-        //             count: itemsObject[key].count
-        //         })
-        //     }
-        //     return <SingleBay
-        //         key={item.bay}
-        //         sort={item.sort}
-        //         jobName={item.jobName}
-        //         techName={item.techName}
-        //         listItems={listItems}
-        //         bay={item.id}
-        //         listLength={listItems.length}
-        //         qr={item.qr}
-        //     />
-        // })
+    const allBays = bays.map(item => {
+        var itemsObject = item.list;
+        var listItems = [];
+        for (var key in itemsObject) {
+            listItems.push({
+                key: key,
+                item: itemsObject[key].item,
+                grabbed: itemsObject[key].grabbed,
+                received: itemsObject[key].received,
+                starred: itemsObject[key].starred,
+                count: itemsObject[key].count
+            })
+        }
+        return <SingleBay
+            key={item.bay}
+            sort={item.sort}
+            jobName={item.jobName}
+            techName={item.techName}
+            listItems={listItems}
+            bay={item.id}
+            listLength={listItems.length}
+            qr={item.qr}
+        />
+    });
+    console.log(allBays)
 
 
 
