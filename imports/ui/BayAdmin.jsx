@@ -10,26 +10,26 @@ const BayAdmin = () => {
     console.log(bays);
 
     const allBays = bays.map(item => {
-        var itemsObject = item.list;
-        var listItems = [];
-        for (var key in itemsObject) {
-            listItems.push({
-                key: key,
-                item: itemsObject[key].item,
-                grabbed: itemsObject[key].grabbed,
-                received: itemsObject[key].received,
-                starred: itemsObject[key].starred,
-                count: itemsObject[key].count
-            })
-        }
+        // var itemsObject = item.list;
+        // var listItems = [];
+        // for (var key in itemsObject) {
+        //     listItems.push({
+        //         key: key,
+        //         item: itemsObject[key].item,
+        //         grabbed: itemsObject[key].grabbed,
+        //         received: itemsObject[key].received,
+        //         starred: itemsObject[key].starred,
+        //         count: itemsObject[key].count
+        //     })
+        //}
         return <SingleBay
             key={item.bay}
             sort={item.sort}
             jobName={item.jobName}
             techName={item.techName}
-            listItems={listItems}
-            bay={item.id}
-            listLength={listItems.length}
+            // listItems={listItems}
+            bay={item._id}
+            // listLength={listItems.length}
             qr={item.qr}
         />
     });
@@ -49,7 +49,7 @@ const BayAdmin = () => {
                 </header>
                 <div className='container'>
                     <div className='allBays'>
-                       {/* {bays} */}
+                       {allBays}
                     </div>
                 </div>
                 <div className="footer-time">
