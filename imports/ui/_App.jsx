@@ -40,7 +40,7 @@ class App extends Component {
 
         <h1>Whatever</h1>
 
-        {/* <Router>
+        { <Router>
           <div>
             {!this.state.authenticated ?
               <div>
@@ -59,7 +59,7 @@ class App extends Component {
 
 
           </div>
-        </Router> */}
+        </Router> }
 
       </div >
     );
