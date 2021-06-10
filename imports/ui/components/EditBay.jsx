@@ -6,7 +6,7 @@ const editBay = () => {
       <h1>Edit Bay:</h1>
       <form>
         <label>
-          Production:
+          Production :
           <input type="text" name="production" />
         </label>
         <input type="submit" value="Submit" />
