@@ -1,6 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const editBay = () => {
+const EditBay = () => {
+  const params = useParams();
+  console.log(params.bay); //this holds bay number passed into the url
   return (
     <div>
       <h1>Edit Bay:</h1>
@@ -15,4 +18,4 @@ const editBay = () => {
   );
 };
 
-export default editBay;
+export default EditBay;

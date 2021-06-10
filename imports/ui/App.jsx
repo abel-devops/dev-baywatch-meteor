@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import BayAdmin from './BayAdmin';
- 
+import BayAdmin from "./BayAdmin";
+import EditBay from "./EditBay";
 
 export const App = () => (
   <div>
-  {<Router>
-    <div>
-      <Route exact path="/" component={ BayAdmin } />
-      {/* <Route exact path="/:loc(NY|LA)/:id" component={this.state.authenticated && BayClient} />
+    {
+      <Router>
+        <div>
+          <Route exact path="/" component={BayAdmin} />
+          <Route exact path="/edit/:bay" component={EditBay} />
+          {/* <Route exact path="/:loc(NY|LA)/:id" component={this.state.authenticated && BayClient} />
       <Route exact path="/:id" component={this.state.authenticated && BayClient} /> */}
-
-
-    </div>
-  </Router> }
+        </div>
+      </Router>
+    }
   </div>
 );
